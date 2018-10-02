@@ -1,12 +1,12 @@
 Summary:	arpsend - tool for network diagnostics and testing
 Summary(pl.UTF-8):	arpsend - narzędzie do diagnostyki testowania sieci
 Name:		arpsend
-Version:	1.2.2
+Version:	1.2.3
 Release:	1
 License:	GPL
 Group:		Applications/Console
 Source0:	http://www.net.princeton.edu/software/arpsend/%{name}-%{version}.tar.gz
-# Source0-md5:	05aab14b448a8e90ff3fdf8fcb07551d
+# Source0-md5:	283cfa7452e2c93fb5dc5311d22c1d6e
 URL:		http://www.net.princeton.edu/software/arpsend/
 BuildRequires:	autoconf
 BuildRequires:	automake
