@@ -10,7 +10,7 @@ Source0:	https://www.net.princeton.edu/software/arpsend/%{name}-%{version}.tar.g
 URL:		https://www.net.princeton.edu/software/arpsend/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	libnet-devel >= 1.1
+BuildRequires:	libnet-devel >= 1:1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
