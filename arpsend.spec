@@ -1,17 +1,16 @@
 Summary:	arpsend - tool for network diagnostics and testing
-Summary(pl.UTF-8):	arpsend - narzędzie do diagnostyki testowania sieci
+Summary(pl.UTF-8):	arpsend - narzędzie do diagnostyki i testowania sieci
 Name:		arpsend
 Version:	1.2.3
-Release:	1
-License:	GPL
+Release:	2
+License:	BSD + LGPL v2
 Group:		Applications/Console
-Source0:	http://www.net.princeton.edu/software/arpsend/%{name}-%{version}.tar.gz
+Source0:	https://www.net.princeton.edu/software/arpsend/%{name}-%{version}.tar.gz
 # Source0-md5:	283cfa7452e2c93fb5dc5311d22c1d6e
-URL:		http://www.net.princeton.edu/software/arpsend/
-BuildRequires:	autoconf
+URL:		https://www.net.princeton.edu/software/arpsend/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	libnet-devel
-BuildRequires:	libtool
+BuildRequires:	libnet-devel >= 1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,7 +27,6 @@ administratorów sieci.
 %setup -q
 
 %build
-%{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
@@ -47,6 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
+%doc AUTHORS COPYING ChangeLog NEWS README TODO
+%attr(755,root,root) %{_bindir}/arpsend
 %{_mandir}/man8/arpsend.8*
